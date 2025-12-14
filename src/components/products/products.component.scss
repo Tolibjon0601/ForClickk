@@ -1,0 +1,130 @@
+/* ===== PRODUCT CARD ===== */
+.product-card {
+  width: 260px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== IMAGE ===== */
+.image-box {
+  width: 100%;
+  height: 190px;
+  background: #f7f7f7;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  padding: 12px;
+}
+.rating span svg path {
+  fill: #ccc;
+  transition: fill 0.2s;
+}
+
+.rating span.filled svg path {
+  fill: gold;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.rating span {
+  display: inline-flex;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ===== PRICE ===== */
+.price {
+  margin-top: 6px;
+}
+
+.price .current {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* ===== TITLE ===== */
+.title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.35;
+  height: 38px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* ===== RATING ===== */
+.rating {
+  font-size: 13px;
+  color: #f59e0b;
+}
+
+.rating span {
+  color: #777;
+  font-size: 12px;
+}
+
+/* ===== BUTTON ===== */
+.buy-btn {
+  margin-top: auto;
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  align-items:center;
+  justify-content: center ;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.buy-btn:hover {
+  background: #0b5ed7;
+}
+
+.buy-btn:active {
+  transform: scale(0.96);
+}
+.product-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.product-title{
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}

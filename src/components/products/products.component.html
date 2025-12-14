@@ -1,0 +1,36 @@
+<h1 class="product-title">Mahsulotlar</h1>
+<div class="product-wrapper">
+  <div class="product-card" *ngFor=" let product of products">
+    <div class="image-box">
+      <img [src]="product.image" [alt]="product.title" />
+
+    </div>
+
+
+    <div class="price">
+      <span class="current">{{product.price|currency}}</span>
+    </div>
+
+
+    <div class="title">
+    {{ product.title }}
+    </div>
+
+    <div class="rating">
+      <ng-container *ngFor="let star of [1,2,3,4,5]; let i = index">
+        <span [class.filled]="i < product.rating.rate">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828
+                     1.48 8.279-7.416-3.967-7.417 3.967
+                     1.481-8.279-6.064-5.828 8.332-1.151z"/>
+          </svg>
+        </span>
+      </ng-container>
+      <span>({{ product.rating.count }})</span>
+    </div>
+
+
+    <button class="buy-btn" (click)="add(product)"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-icon lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>Savatga</button>
+  </div>
+
+</div>
